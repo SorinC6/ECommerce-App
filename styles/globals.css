@@ -461,6 +461,9 @@ padding: 30px 65px;
   gap: 5px;
   align-items: center;
 }
+.reviews p {
+  margin-bottom: 5px;
+}
 
 .product-detail-desc h4{
   margin-top: 10px;
