@@ -11,7 +11,6 @@ import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products, slug }) => {
-  console.log("product", product);
 
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
@@ -135,7 +134,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-  console.log("product", product);
   return {
     props: { products, product, slug },
   };
