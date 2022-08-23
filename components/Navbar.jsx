@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">JSM Headphones</Link>
+        <Link href="/">Woop Online Shop</Link>
       </p>
 
       <button
@@ -22,8 +22,8 @@ const Navbar = () => {
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span>
       </button>
-
-      {showCart && <Cart />}
+      <Cart showCart={showCart} />
+      {/* {showCart && <Cart />} */}
     </div>
   );
 };

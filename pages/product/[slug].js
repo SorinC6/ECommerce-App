@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -10,12 +10,16 @@ import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product, products, slug }) => {
   console.log("product", product);
 
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart, setQty } = useStateContext();
+
+  useEffect(() => {
+    setQty(1);
+  }, [slug]);
 
   const handleBuyNow = () => {
     onAdd(product, qty);
@@ -29,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <div className="image-container">
             <img
-              src={urlFor(image && image[index])}
+              src={urlFor(image && image[index]).url()}
               className="product-detail-image"
             />
           </div>
@@ -133,7 +137,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const products = await client.fetch(productsQuery);
   console.log("product", product);
   return {
-    props: { products, product },
+    props: { products, product, slug },
   };
 };
 
