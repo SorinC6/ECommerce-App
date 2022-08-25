@@ -7,6 +7,7 @@ const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="hero-wrapper">
       <div className="hero-banner-container">
+        <img src="/GROOT-bg.svg" className="groot-bg" />
         <div className="info-container">
           <img src="/logoMarvel.svg" alt="logo" />
           <h1>DANCING GROOT</h1>
@@ -21,9 +22,10 @@ const HeroBanner = ({ heroBanner }) => {
           </Link>
         </div>
         <div className="visual-container">
-          <img src="/circle.svg" alt="circle" className="circle" />
+          {/* <img src="/circle.svg" alt="circle" className="circle" /> */}
           <img src="/leafs1.svg" className="leaf1" />
           <img src="/leafs2.svg" className="leaf2" />
+          <img src="/leaf3.svg" className="leaf4" />
           <img src="/leafBig.svg" className="leaf3" />
           <img src="/grootSvg.svg" alt="main-picture" />
         </div>
