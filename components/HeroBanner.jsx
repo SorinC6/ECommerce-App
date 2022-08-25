@@ -21,41 +21,22 @@ const HeroBanner = ({ heroBanner }) => {
           </Link>
         </div>
         <div className="visual-container">
-          {/* <img src="/circle.svg" alt="circle" className="circle" /> */}
+          <img src="/circle.svg" alt="circle" className="circle" />
           <img src="/leafs1.svg" className="leaf1" />
           <img src="/leafs2.svg" className="leaf2" />
           <img src="/leafBig.svg" className="leaf3" />
           <img src="/grootSvg.svg" alt="main-picture" />
         </div>
-        {/* <div>
-        <p className="beats-solo">{heroBanner.smallText}</p>
-        <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
-        <img
-          src={urlFor(heroBanner.image)}
-          alt="headphones"
-          className="hero-banner-image"
-        />
-
-        <div>
-          <Link href={`/product/${heroBanner.product}`}>
-            <button type="button">{heroBanner.buttonText}</button>
-          </Link>
-          <div className="desc">
-            <h5>Description</h5>
-            <p>{heroBanner.desc}</p>
-          </div>
-        </div>
-      </div> */}
       </div>
-      <Link href="#feed-content">
-        <div class="container">
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <a class="text" href="https://naegele.it"></a>
-        </div>
-      </Link>
+      <div style={{ cursor: "pointer", height: "80px" }}>
+        <Link href="#feed-content">
+          <div class="arrow-container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

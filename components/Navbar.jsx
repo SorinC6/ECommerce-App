@@ -11,7 +11,8 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">Woop Online Shop</Link>
+        <img src="/LOGO.svg" />
+        <Link href="/">MARVEL SHOP</Link>
       </p>
 
       <button
